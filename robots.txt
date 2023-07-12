@@ -1,0 +1,22 @@
+검색로봇에게 사이트 및 웹 페이지를  수집할 수 있도록 허용/제한 (상위 폴더안에 위치시키기)
+
+Yeti(naver) Googlebot(google) Daumoa(daum)
+
+- 모든 검색엔진 로봇 수집 허용
+User-agent: *
+Allow: /
+
+- 네이버 검색로봇만 수집 허용
+User-agent: *
+Disallow: /
+User-agent: Yeti
+Allow: /
+
+
+- 관리자 페이지나 개인정보 페이지 등 수집 비 허용
+User-agent: Yeti
+Disallow: /private*/
+
+- 모든 로봇 차단
+User-agent: *
+Disallow: /
